@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MilestoneJury
 
 **MilestoneJury** is a GenLayer Intelligent Contract for transparent acceptance review of public open-source work. A project owner fixes a natural-language milestone on-chain, then a contributor submits a public GitHub or GitLab delivery URL. GenLayer validators independently fetch the page and reach consensus on whether the work is accepted, requires revision, or is out of scope.
@@ -38,3 +39,7 @@ The next real interaction must configure a genuine milestone and submit a public
 ## References
 
 [1] [GenLayer — When to Use GenLayer](https://docs.genlayer.com/developers/intelligent-contracts/when-to-use-genlayer)
+=======
+# milestonejury-genlayer
+A GenLayer Intelligent Contract for neutral consensus adjudication of public open source milestone deliveries.
+>>>>>>> 645e4c5528995de51612bef66e87a40b563915fd
