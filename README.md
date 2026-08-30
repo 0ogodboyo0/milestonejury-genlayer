@@ -31,7 +31,7 @@ The adjudication prompt treats all fetched content as untrusted data, rejects un
 
 ## Intended real test
 
-The contract was deployed and finalized on GenLayer Studionet at [`0x42c60cC74e76C69b90c2a30285c7fb2f9dD12228`](https://explorer-studio.genlayer.com/address/0x42c60cC74e76C69b90c2a30285c7fb2f9dD12228). The finalized deployment transaction is available on the [Studio Explorer](https://explorer-studio.genlayer.com/tx/0x5218757c46445875a70674fae25c09682a1a36ac69da8aab3a0fdb39c35b2caf).
+The contract was deployed and finalized on GenLayer Studionet at [`0x82a061814068fcC3CE15E86262aAf151DB9d4063`](https://explorer-studio.genlayer.com/address/0x82a061814068fcC3CE15E86262aAf151DB9d4063). The finalized deployment transaction is available on the [Studio Explorer](https://explorer-studio.genlayer.com/tx/0x0068be9539263f021dca557315b4939458ac689e46277bfdf283e3a11dd05a7c).
 
 The next real interaction must configure a genuine milestone and submit a public GitHub page that genuinely relates to those criteria. Its Explorer links and final result will be added to `docs/DEPLOYMENT.md`. No fabricated activity, content, links, or verdicts belong in this repository.
 
