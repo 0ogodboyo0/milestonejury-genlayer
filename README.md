@@ -31,9 +31,11 @@ The adjudication prompt treats all fetched content as untrusted data, rejects un
 
 ## Intended real test
 
-The contract was deployed and finalized on GenLayer Studionet at [`0x82a061814068fcC3CE15E86262aAf151DB9d4063`](https://explorer-studio.genlayer.com/address/0x82a061814068fcC3CE15E86262aAf151DB9d4063). The finalized deployment transaction is available on the [Studio Explorer](https://explorer-studio.genlayer.com/tx/0x0068be9539263f021dca557315b4939458ac689e46277bfdf283e3a11dd05a7c).
+The corrected contract was deployed and finalized on GenLayer Studionet at [`0x72a4d24d18B2126D1Bdac3aCDE8B54F578b592E9`](https://explorer-studio.genlayer.com/address/0x72a4d24d18B2126D1Bdac3aCDE8B54F578b592E9). The finalized deployment transaction is available on the [Studio Explorer](https://explorer-studio.genlayer.com/tx/0xd560d5e34a3d82cd954d5f3ac6dff6bc0a14164edd2a00b46d1958b53094de88).
 
-The next real interaction must configure a genuine milestone and submit a public GitHub page that genuinely relates to those criteria. Its Explorer links and final result will be added to `docs/DEPLOYMENT.md`. No fabricated activity, content, links, or verdicts belong in this repository.
+The contract was configured through the finalized [`define_milestone` transaction](https://explorer-studio.genlayer.com/tx/0x89efd6c63c6c3dd5fba72ce91f547159daccbec774af4af80f89fe2ec7b57c46) and the public README evidence was evaluated through the finalized [`adjudicate_delivery` transaction](https://explorer-studio.genlayer.com/tx/0x56909de0eccbc0eacc53a43eea72ab5bd8390c1ef0a9b42a557f0638d0f930b8).
+
+The real adjudication returned `ACCEPTED` with score `92` and `AWARD_ELIGIBLE`. No fabricated activity, content, links, or verdicts belong in this repository.
 
 ## References
 
