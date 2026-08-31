@@ -38,3 +38,27 @@ The next real interaction must configure a genuine milestone and submit a public
 ## References
 
 [1] [GenLayer — When to Use GenLayer](https://docs.genlayer.com/developers/intelligent-contracts/when-to-use-genlayer)
+
+## Owner authorization
+
+The milestone configuration is controlled by the contract deployer. During initialization, the contract stores the deployment caller as `owner`; `define_milestone` rejects every other caller before it can write any criteria. The function also remains one-time only, so the owner cannot replace criteria after they have been recorded.
+
+Relevant implementation in [`MilestoneJury.py`](./MilestoneJury.py):
+
+```python
+class MilestoneJury(gl.Contract):
+    owner: Address
+
+    def __init__(self):
+        self.owner = gl.message.sender_address
+        # Other state is initialized here.
+
+    @gl.public.write
+    def define_milestone(self, title: str, criteria: str) -> str:
+        if gl.message.sender_address != self.owner:
+            raise gl.vm.UserError("Only the contract owner can define the milestone")
+        if self.title != "":
+            raise gl.vm.UserError("Milestone is already defined")
+```
+
+This authorization is also covered by the repository source checks and is present in the exact source used for the corrected deployment. The deployed contract address and finalized transaction evidence are recorded in [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md).
