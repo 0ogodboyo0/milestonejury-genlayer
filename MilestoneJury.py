@@ -2,7 +2,9 @@
 # { "Depends": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6" }
 from genlayer import *
 
+
 class MilestoneJury(gl.Contract):
+    owner: Address
     title: str
     criteria: str
     url: str
@@ -12,6 +14,8 @@ class MilestoneJury(gl.Contract):
     eligibility: str
 
     def __init__(self):
+        # The deployer becomes the only address allowed to configure the milestone.
+        self.owner = gl.message.sender_address
         self.title = ""
         self.criteria = ""
         self.url = ""
@@ -22,6 +26,8 @@ class MilestoneJury(gl.Contract):
 
     @gl.public.write
     def define_milestone(self, title: str, criteria: str) -> str:
+        if gl.message.sender_address != self.owner:
+            raise gl.vm.UserError("Only the contract owner can define the milestone")
         if self.title != "":
             raise gl.vm.UserError("Milestone is already defined")
         if len(title.strip()) < 10 or len(criteria.strip()) < 80:
